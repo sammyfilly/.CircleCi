@@ -1,0 +1,9 @@
+{
+  "extends": "../../../tsconfig.package",
+  "compilerOptions": {
+    "outDir": "./dist-esm",
+    "declarationDir": "./types"
+  },
+  "exclude": ["node_modules", "./samples/**/*.ts"],
+  "include": ["./src/**/*.ts", "./test/**/*.ts"]
+}

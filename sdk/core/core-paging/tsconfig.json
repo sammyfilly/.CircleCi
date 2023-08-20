@@ -1,0 +1,11 @@
+{
+  "extends": "../../../tsconfig.package",
+  "compilerOptions": {
+    "outDir": "./dist-esm",
+    "declarationDir": "./types/latest",
+    "paths": {
+      "@azure/core-paging": ["./src/index"]
+    }
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts", "samples-dev/**/*.ts"]
+}

@@ -1,0 +1,28 @@
+{
+  "editor.autoIndent": "full",
+  "editor.detectIndentation": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    { "language": "typescript", "autoFix": true }
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.DS_Store": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "javascript.preferences.quoteStyle": "double",
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.preferences.quoteStyle": "double",
+  "git.ignoreLimitWarning": true,
+  "cSpell.words": [
+    "datalake"
+  ],
+  "prettier.prettierPath": "./sdk/core/core-rest-pipeline/node_modules/prettier"
+}

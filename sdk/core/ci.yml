@@ -1,0 +1,70 @@
+# NOTE: Please refer to https://aka.ms/azsdk/engsys/ci-yaml before editing this file.
+
+trigger:
+  branches:
+    include:
+      - main
+      - release/*
+      - hotfix/*
+  paths:
+    include:
+      - sdk/core/
+      - eng/
+      - common/
+      - rush.json
+    exclude:
+      - common/smoke-test/
+      - eng/common/
+
+pr:
+  branches:
+    include:
+      - main
+      - feature/*
+      - release/*
+      - hotfix/*
+  paths:
+    include:
+      - sdk/core/
+      - eng/
+      - common/
+      - rush.json
+    exclude:
+      - common/smoke-test/
+      - eng/common/
+
+extends:
+  template: ../../eng/pipelines/templates/stages/archetype-sdk-client.yml
+  parameters:
+    ServiceDirectory: core
+    Artifacts:
+      - name: azure-abort-controller
+        safeName: azureabortcontroller
+      - name: azure-core-amqp
+        safeName: azurecoreamqp
+      - name: azure-core-auth
+        safeName: azurecoreauth
+      - name: azure-core-client
+        safeName: azurecoreclient
+      - name: azure-rest-core-client
+        safeName: azurerestcoreclient
+      - name: azure-core-http
+        safeName: azurecorehttp
+      - name: azure-core-rest-pipeline
+        safeName: azurecorerestpipeline
+        # TODO: Remove when REX validation tool is integrated: https://github.com/Azure/azure-sdk-for-js/issues/26770
+        skipPublishDocMs: true
+      - name: azure-core-lro
+        safeName: azurecorelro
+      - name: azure-core-paging
+        safeName: azurecorepaging
+      - name: azure-core-tracing
+        safeName: azurecoretracing
+      - name: azure-core-xml
+        safeName: azurecorexml
+      - name: azure-core-util
+        safeName: azurecoreutil
+      - name: azure-logger
+        safeName: azurelogger
+      - name: azure-core-http-compat
+        safeName: azurecorehttpcompat

@@ -1,0 +1,14 @@
+{
+  "extends": "../../../tsconfig.package",
+  "compilerOptions": {
+    "lib": ["DOM"],
+    "declarationDir": "./types",
+    "outDir": "./dist-esm",
+    "resolveJsonModule": true,
+    "paths": {
+      "@azure/identity": ["./src/index"]
+    }
+  },
+  "include": ["src/**/*", "test/**/*", "samples-dev/**/*.ts"],
+  "exclude": ["test/manual*/**/*", "node_modules"]
+}
